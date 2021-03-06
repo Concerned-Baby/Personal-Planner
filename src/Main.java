@@ -1,9 +1,9 @@
-import application.MainPanel;
+import application.GraphicsManager;
 
 public class Main 
 {
 	public static void main(String[] args)
 	{
-		new MainPanel();
+		new GraphicsManager();
 	}
 }

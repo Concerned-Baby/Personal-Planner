@@ -1,6 +1,8 @@
 package application;
 
-public class MainPanel 
+import javax.swing.JFrame;
+
+public class MainPanel extends JFrame
 {
 
 }
