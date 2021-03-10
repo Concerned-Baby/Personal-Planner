@@ -25,9 +25,17 @@ public class CalenderHelper
 	public static final int SUNDAY = 7987;
 	
 	
-	public static int getMonthLength(int month)
+	public static int getMonthLength(int month, int year)
 	{
-		return 0;
+		if (month == FEBRUARY)
+		{
+			if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)
+				return 29;
+			return 28;
+		}
+		if (month == APRIL || month == JUNE || month == SEPTEMBER || month == NOVEMBER)
+			return 30;
+		return 31;
 	}
 	
 	public static int getMonthStartDate(int month)
