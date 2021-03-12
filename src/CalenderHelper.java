@@ -24,7 +24,12 @@ public class CalenderHelper
 	public static final int SATURDAY = 6987;
 	public static final int SUNDAY = 7987;
 	
-	
+	/**
+	 * 
+	 * @param month The month of the year, based on the constants in this class
+	 * @param year The year number, based on the gregorian calander, revised 2020
+	 * @return The length of the given month, in days
+	 */
 	public static int getMonthLength(int month, int year)
 	{
 		if (month == FEBRUARY)
