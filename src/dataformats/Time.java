@@ -1,6 +1,5 @@
 package dataformats;
 
-public class Day 
-{
-	
+public class Time {
+
 }
