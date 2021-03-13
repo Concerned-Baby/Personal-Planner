@@ -8,5 +8,11 @@ public interface Activity
 	
 	public boolean isDone();
 	
+	public void markAsDone();
 	
+	public void setStartTime(Time t);
+	
+	public void setEndTime(Time t);
+	
+	public int getLengthMinutes();
 }
