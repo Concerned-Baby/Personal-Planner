@@ -4,44 +4,44 @@ public class DailyActivity implements Activity
 {
 
 	@Override
-	public Time getStartTime() {
-		// TODO Auto-generated method stub
+	public Time getStartTime() 
+	{
 		return null;
 	}
 
 	@Override
-	public Time getEndTime() {
-		// TODO Auto-generated method stub
+	public Time getEndTime() 
+	{
 		return null;
 	}
 
 	@Override
-	public boolean isDone() {
-		// TODO Auto-generated method stub
+	public boolean isDone() 
+	{
 		return false;
 	}
 
 	@Override
-	public void markAsDone() {
-		// TODO Auto-generated method stub
+	public void markAsDone() 
+	{
 		
 	}
 
 	@Override
-	public void setStartTime(Time t) {
-		// TODO Auto-generated method stub
+	public void setStartTime(Time t) 
+	{
 		
 	}
 
 	@Override
-	public void setEndTime(Time t) {
-		// TODO Auto-generated method stub
+	public void setEndTime(Time t) 
+	{
 		
 	}
 
 	@Override
-	public int getLengthMinutes() {
-		// TODO Auto-generated method stub
+	public int getLengthMinutes() 
+	{
 		return 0;
 	}
 
