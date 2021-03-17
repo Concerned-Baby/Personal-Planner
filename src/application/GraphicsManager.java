@@ -6,6 +6,6 @@ public class GraphicsManager
 	
 	public GraphicsManager()
 	{
-		
+		frame = new MainPanel();
 	}
 }
