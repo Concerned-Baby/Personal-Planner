@@ -27,4 +27,9 @@ public class Time
 	{
 		
 	}
+	
+	public int timeTo(Time that)
+	{
+		return (that.getHour() - this.getHour()) * 60 + (that.getMinute() - this.getMinute());
+	}
 }
