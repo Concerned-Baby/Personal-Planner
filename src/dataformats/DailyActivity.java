@@ -2,47 +2,58 @@ package dataformats;
 
 public class DailyActivity implements Activity
 {
+	
+	Time start, end;
+	boolean done;
+	
+	public DailyActivity(Time start, Time end)
+	{
+		this.start = start;
+		this.end = end;
+		done = false;
+	}
+	
 
 	@Override
 	public Time getStartTime() 
 	{
-		return null;
+		return start;
 	}
 
 	@Override
 	public Time getEndTime() 
 	{
-		return null;
+		return end;
 	}
 
 	@Override
 	public boolean isDone() 
 	{
-		return false;
+		return done;
 	}
 
 	@Override
 	public void markAsDone() 
 	{
-		
+		done = true;
 	}
 
 	@Override
 	public void setStartTime(Time t) 
 	{
-		
+		start = t;
 	}
 
 	@Override
 	public void setEndTime(Time t) 
 	{
-		
+		end = t;
 	}
 
 	@Override
 	public int getLengthMinutes() 
 	{
-		return 0;
+		return start.timeTo(end);
 	}
 
 }
