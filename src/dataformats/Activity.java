@@ -10,6 +10,8 @@ public interface Activity
 	
 	public void markAsDone();
 	
+	public void markAsUndone();
+	
 	public void setStartTime(Time t);
 	
 	public void setEndTime(Time t);
