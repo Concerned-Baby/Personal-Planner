@@ -2,47 +2,57 @@ package dataformats;
 
 public class WeeklyActivity implements Activity
 {
-
-	@Override
-	public Time getStartTime() {
-		// TODO Auto-generated method stub
-		return null;
+	Time start, end;
+	boolean done;
+	
+	public WeeklyActivity(Time start, Time end)
+	{
+		this.start = start;
+		this.end = end;
+		done = false;
 	}
 
 	@Override
-	public Time getEndTime() {
-		// TODO Auto-generated method stub
-		return null;
+	public Time getStartTime() 
+	{
+		return start;
 	}
 
 	@Override
-	public boolean isDone() {
-		// TODO Auto-generated method stub
-		return false;
+	public Time getEndTime() 
+	{
+		return end;
 	}
 
 	@Override
-	public void markAsDone() {
-		// TODO Auto-generated method stub
-		
+	public boolean isDone() 
+	{
+		return done;
 	}
 
 	@Override
-	public void setStartTime(Time t) {
-		// TODO Auto-generated method stub
-		
+	public void markAsDone() 
+	{
+		done = true;
+	}
+	
+
+	@Override
+	public void setStartTime(Time t) 
+	{
+		start = t;
 	}
 
 	@Override
-	public void setEndTime(Time t) {
-		// TODO Auto-generated method stub
-		
+	public void setEndTime(Time t) 
+	{
+		end = t;
 	}
 
 	@Override
-	public int getLengthMinutes() {
-		// TODO Auto-generated method stub
-		return 0;
+	public int getLengthMinutes() 
+	{
+		return end.timeTo(start);
 	}
 
 }
