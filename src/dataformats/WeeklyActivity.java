@@ -55,4 +55,10 @@ public class WeeklyActivity implements Activity
 		return end.timeTo(start);
 	}
 
+	@Override
+	public void markAsUndone() 
+	{
+		done = false;
+	}
+
 }
