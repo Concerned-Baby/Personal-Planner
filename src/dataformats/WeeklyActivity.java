@@ -36,6 +36,12 @@ public class WeeklyActivity implements Activity
 		done = true;
 	}
 	
+	@Override
+	public void markAsUndone() 
+	{
+		done = false;
+	}
+	
 
 	@Override
 	public void setStartTime(Time t) 
@@ -53,12 +59,6 @@ public class WeeklyActivity implements Activity
 	public int getLengthMinutes() 
 	{
 		return end.timeTo(start);
-	}
-
-	@Override
-	public void markAsUndone() 
-	{
-		done = false;
 	}
 
 }

@@ -37,6 +37,12 @@ public class DailyActivity implements Activity
 	{
 		done = true;
 	}
+	
+	@Override
+	public void markAsUndone() 
+	{
+		done = false;
+	}
 
 	@Override
 	public void setStartTime(Time t) 
@@ -55,5 +61,6 @@ public class DailyActivity implements Activity
 	{
 		return start.timeTo(end);
 	}
+
 
 }
