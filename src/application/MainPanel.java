@@ -9,5 +9,16 @@ public class MainPanel extends JFrame
 	{
 		super(name);
 	}
+	
+	public void setMainMenu()
+	{
+		
+	}
+	
+	public void setCalander()
+	{
+		
+	}
+	
 
 }
