@@ -1,5 +1,6 @@
 package application;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class MainPanel extends JFrame
@@ -12,7 +13,8 @@ public class MainPanel extends JFrame
 	
 	public void setMainMenu()
 	{
-		
+		JButton toCalander = new JButton("Go To Calander");
+		toCalander.setBounds(400, 400, 120, 80);
 	}
 	
 	public void setCalander()
