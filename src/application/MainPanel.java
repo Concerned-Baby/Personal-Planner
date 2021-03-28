@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 public class MainPanel extends JFrame implements ActionListener
 {
 
+	private static final long serialVersionUID = 1L;
+
 	public MainPanel(String name) 
 	{
 		super(name);
