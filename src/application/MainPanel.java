@@ -12,6 +12,8 @@ public class MainPanel extends JFrame
 	private static final long serialVersionUID = 1L;
 	
 	private ButtonManager buttonManager;
+	
+	private JButton toCalander;
 
 	public MainPanel(String name) 
 	{
@@ -21,7 +23,7 @@ public class MainPanel extends JFrame
 	
 	public void setMainMenu()
 	{
-		JButton toCalander = new JButton("Go To Calander");
+		toCalander = new JButton("Go To Calander");
 		toCalander.setBounds(400, 400, 120, 80);
 		toCalander.addActionListener(buttonManager);
 	}
@@ -37,7 +39,10 @@ public class MainPanel extends JFrame
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-			//TODO
+			if (e.getSource().equals(toCalander))
+			{
+				setCalander();
+			}
 		}
 		
 	}
