@@ -28,9 +28,12 @@ public class MainPanel extends JFrame
 		toCalander.addActionListener(buttonManager);
 	}
 	
-	public void setCalander()
+	public void setCalander(int panel)
 	{
-		
+		if (panel == 1) //from main menu
+		{
+			
+		}
 	}
 
 	private class ButtonManager implements ActionListener
@@ -41,7 +44,7 @@ public class MainPanel extends JFrame
 		{
 			if (e.getSource().equals(toCalander))
 			{
-				setCalander();
+				setCalander(1);
 			}
 		}
 		
