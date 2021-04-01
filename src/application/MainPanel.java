@@ -32,7 +32,7 @@ public class MainPanel extends JFrame
 	{
 		if (panel == 1) //from main menu
 		{
-			
+			;;
 		}
 	}
 
