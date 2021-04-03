@@ -1,10 +1,11 @@
 import application.GraphicsManager;
+import logging.LogWriter;
 
 public class Main 
 {
 	public static void main(String[] args)
 	{
-		System.out.println("started");
+		LogWriter.write("Program Started");
 		new GraphicsManager();
 	}
 }
