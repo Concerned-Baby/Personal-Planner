@@ -18,5 +18,6 @@ public class GraphicsManager
 	public void start()
 	{
 		frame.setVisible(true);
+		frame.setMainMenu();
 	}
 }
