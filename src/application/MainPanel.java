@@ -41,7 +41,7 @@ public class MainPanel extends JFrame
 	
 	private JComponent createCalender(int month, int year)
 	{
-		return null;
+		return new JCalender(month, year);
 	}
 
 	private class ButtonManager implements ActionListener
