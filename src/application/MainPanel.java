@@ -4,8 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 public class MainPanel extends JFrame
 {
@@ -39,7 +39,7 @@ public class MainPanel extends JFrame
 		}
 	}
 	
-	private JComponent createCalender(int month, int year)
+	private JPanel createCalender(int month, int year)
 	{
 		return new JCalender(month, year);
 	}
