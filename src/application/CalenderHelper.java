@@ -44,8 +44,17 @@ public class CalenderHelper
 		return 31;
 	}
 	
-	public static int getMonthStartDate(int month)
+	public static int getMonthStartDate(int month, int year)
 	{
+		int k;
+		if (month == APRIL || month == JULY) k = 0;
+		else if (month == JANUARY || month == OCTOBER) k = 1;
+		else if (month == MAY) k = 2;
+		else if (month == AUGUST) k = 3;
+		else if (month == FEBRUARY || month == MARCH || month == NOVEMBER) k = 4;
+		else if (month == MAY) k = 5;
+		else if (month == SEPTEMBER || month == DECEMBER) k = 6;
+		
 		return 0;
 	}
 }

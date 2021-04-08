@@ -9,5 +9,6 @@ public class JCalender extends JPanel
 	public JCalender(int month, int year)
 	{
 		int days = CalenderHelper.getMonthLength(month, year);
+		int startDay = CalenderHelper.getMonthStartDate(month, year);
 	}
 }
