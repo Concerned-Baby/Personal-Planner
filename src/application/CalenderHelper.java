@@ -46,7 +46,7 @@ public class CalenderHelper
 	
 	public static int getMonthStartDate(int month, int year)
 	{
-		int k;
+		int k = Integer.MAX_VALUE;
 		if (month == APRIL || month == JULY) k = 0;
 		else if (month == JANUARY || month == OCTOBER) k = 1;
 		else if (month == MAY) k = 2;
@@ -54,7 +54,6 @@ public class CalenderHelper
 		else if (month == FEBRUARY || month == MARCH || month == NOVEMBER) k = 4;
 		else if (month == MAY) k = 5;
 		else if (month == SEPTEMBER || month == DECEMBER) k = 6;
-		
-		return 0;
+		return (int)((k + (int)(2.6 * month - 2) - (2 * (year % 100) + year) + (int)(year / 4) + (int)((year % 100)) / 4) % 7);
 	}
 }
