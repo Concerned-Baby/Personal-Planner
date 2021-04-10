@@ -17,13 +17,13 @@ public class CalenderHelper
 	public static final int NOVEMBER = 11567;
 	public static final int DECEMBER = 12567;
 	
-	public static final int MONDAY = 1987;
-	public static final int TUESDAY = 2987;
-	public static final int WEDNESDAY = 3987;
-	public static final int THURSDAY = 4987;
-	public static final int FRIDAY = 5987;
-	public static final int SATURDAY = 6987;
-	public static final int SUNDAY = 7987;
+	public static final int MONDAY = 1;
+	public static final int TUESDAY = 2;
+	public static final int WEDNESDAY = 3;
+	public static final int THURSDAY = 4;
+	public static final int FRIDAY = 5;
+	public static final int SATURDAY = 6;
+	public static final int SUNDAY = 0;
 	
 	/**
 	 * 
