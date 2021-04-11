@@ -28,7 +28,7 @@ public class CalenderHelper
 	/**
 	 * 
 	 * @param month The month of the year, based on the constants in this class
-	 * @param year The year number, based on the gregorian calander, revised 2020
+	 * @param year The year number, based on the Gregorian calendar, revised 2020
 	 * @return The length of the given month, in days
 	 */
 	public static int getMonthLength(int month, int year)
@@ -44,6 +44,12 @@ public class CalenderHelper
 		return 31;
 	}
 	
+	/**
+	 * 
+	 * @param month The month of the year, based on the constants in this class
+	 * @param year The year number, based on the Gregorian calendar, revised 2020
+	 * @return The day of the week of the 1st of the month, based on constants in this class
+	 */
 	public static int getMonthStartDate(int month, int year)
 	{
 		int k = Integer.MAX_VALUE;
