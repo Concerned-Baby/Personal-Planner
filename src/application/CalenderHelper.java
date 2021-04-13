@@ -3,7 +3,6 @@ package application;
 public class CalenderHelper
 {
 	
-	//TODO add all the constants (months and weekdays)
 	public static final int JANUARY = 1567;
 	public static final int FEBRUARY = 2567;
 	public static final int MARCH = 3567;
@@ -26,7 +25,7 @@ public class CalenderHelper
 	public static final int SUNDAY = 0;
 	
 	/**
-	 * 
+	 * Gets the length of a month given the month and the year
 	 * @param month The month of the year, based on the constants in this class
 	 * @param year The year number, based on the Gregorian calendar, revised 2020
 	 * @return The length of the given month, in days
@@ -45,7 +44,7 @@ public class CalenderHelper
 	}
 	
 	/**
-	 * 
+	 * Gets the day of the week of the 1st of any month, given the month and the year
 	 * @param month The month of the year, based on the constants in this class
 	 * @param year The year number, based on the Gregorian calendar, revised 2020
 	 * @return The day of the week of the 1st of the month, based on constants in this class
