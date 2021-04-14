@@ -5,10 +5,27 @@ import javax.swing.JPanel;
 public class JCalender extends JPanel
 {
 	private static final long serialVersionUID = 1L;
+	
+	private int month, year, days, startDay;
 
 	public JCalender(int month, int year)
 	{
-		int days = CalenderHelper.getMonthLength(month, year);
-		int startDay = CalenderHelper.getMonthStartDate(month, year);
+		this.month = month;
+		this.year = year;
+		days = CalenderHelper.getMonthLength(month, year);
+		startDay = CalenderHelper.getMonthStartDate(month, year);
+		
+		createLables();
+		setDates();
+	}
+	
+	private void createLables()
+	{
+		
+	}
+	
+	private void setDates()
+	{
+		
 	}
 }
