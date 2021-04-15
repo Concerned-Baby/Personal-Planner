@@ -1,5 +1,7 @@
 package application;
 
+import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 
 public class JCalender extends JPanel
@@ -14,6 +16,8 @@ public class JCalender extends JPanel
 		this.year = year;
 		days = CalenderHelper.getMonthLength(month, year);
 		startDay = CalenderHelper.getMonthStartDate(month, year);
+		
+		this.setLayout(new GridLayout());
 		
 		createLables();
 		setDates();
