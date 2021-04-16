@@ -2,6 +2,7 @@ package application;
 
 import java.awt.GridLayout;
 
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class JCalender extends JPanel
@@ -25,7 +26,13 @@ public class JCalender extends JPanel
 	
 	private void createLables()
 	{
-		
+		this.add(new JLabel("Sunday"));
+		this.add(new JLabel("Monday"));
+		this.add(new JLabel("Tuesday"));
+		this.add(new JLabel("Wednesday"));
+		this.add(new JLabel("Thursday"));
+		this.add(new JLabel("Friday"));
+		this.add(new JLabel("Saturday"));
 	}
 	
 	private void setDates()
