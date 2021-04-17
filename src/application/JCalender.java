@@ -26,20 +26,29 @@ public class JCalender extends JPanel
 	
 	private void createLables()
 	{
-		this.add(new JLabel("Sunday"));
-		this.add(new JLabel("Monday"));
-		this.add(new JLabel("Tuesday"));
-		this.add(new JLabel("Wednesday"));
-		this.add(new JLabel("Thursday"));
-		this.add(new JLabel("Friday"));
-		this.add(new JLabel("Saturday"));
+		this.add(new DateBox("Sunday"));
+		this.add(new DateBox("Monday"));
+		this.add(new DateBox("Tuesday"));
+		this.add(new DateBox("Wednesday"));
+		this.add(new DateBox("Thursday"));
+		this.add(new DateBox("Friday"));
+		this.add(new DateBox("Saturday"));
 	}
 	
 	private void setDates()
 	{
 		for (int i = 0; i < startDay; i++)
 		{
-			this.add(new JLabel("x"));
+			this.add(new DateBox("x"));
+		}
+	}
+	
+	private class DateBox extends JLabel
+	{
+		public DateBox(String label)
+		{
+			super(label);
+			this.setSize(100, 100);
 		}
 	}
 }
