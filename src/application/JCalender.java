@@ -18,7 +18,7 @@ public class JCalender extends JPanel
 		days = CalenderHelper.getMonthLength(month, year);
 		startDay = CalenderHelper.getMonthStartDate(month, year);
 		
-		this.setLayout(new GridLayout());
+		this.setLayout(new GridLayout(6, 7));
 		
 		createLables();
 		setDates();
@@ -37,6 +37,9 @@ public class JCalender extends JPanel
 	
 	private void setDates()
 	{
-		
+		for (int i = 0; i < startDay; i++)
+		{
+			this.add(new JLabel("x"));
+		}
 	}
 }
