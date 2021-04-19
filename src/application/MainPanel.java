@@ -7,6 +7,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import logging.LogWriter;
+
 public class MainPanel extends JFrame
 {
 
@@ -20,6 +22,8 @@ public class MainPanel extends JFrame
 	{
 		super(name);
 		buttonManager = new ButtonManager();
+		LogWriter.write("MainPanel Created");
+		//setMainMenu();
 	}
 	
 	public void setMainMenu()
@@ -28,6 +32,7 @@ public class MainPanel extends JFrame
 		toCalender.setBounds(400, 400, 120, 80);
 		toCalender.addActionListener(buttonManager);
 		this.add(toCalender);
+		LogWriter.write("Menu set and displayed");
 	}
 	
 	public void setCalander(int panel)
