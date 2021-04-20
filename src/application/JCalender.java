@@ -24,6 +24,11 @@ public class JCalender extends JPanel
 		setDates();
 	}
 	
+	public String toString()
+	{
+		return month + " " +  year; //QUICK FIX
+	}
+	
 	private void createLables()
 	{
 		this.add(new DateBox("Sunday"));
@@ -41,7 +46,16 @@ public class JCalender extends JPanel
 		{
 			this.add(new DateBox("x"));
 		}
+		for (int i = 0; i < days; i++)
+		{
+			this.add(new DateBox(i + ")"));
+		}
+		for (int i = 0; i < 42 - startDay - days; i++)
+		{
+			this.add(new DateBox("X"));
+		}
 	}
+	
 	
 	private class DateBox extends JLabel
 	{

@@ -46,6 +46,7 @@ public class MainPanel extends JFrame
 	
 	private JPanel createCalender(int month, int year)
 	{
+		LogWriter.write("creating calender" + month + "" + year);
 		return new JCalender(month, year);
 	}
 
