@@ -26,7 +26,19 @@ public class JCalender extends JPanel
 	
 	public String toString()
 	{
-		return month + " " +  year; //QUICK FIX
+		if (month == CalenderHelper.JANUARY) return "January " + year;
+		if (month == CalenderHelper.FEBRUARY) return "February " + year;
+		if (month == CalenderHelper.MARCH) return "March " + year;
+		if (month == CalenderHelper.APRIL) return "April " + year;
+		if (month == CalenderHelper.MAY) return "May " + year;
+		if (month == CalenderHelper.JUNE) return "June " + year;
+		if (month == CalenderHelper.JULY) return "July " + year;
+		if (month == CalenderHelper.AUGUST) return "August " + year;
+		if (month == CalenderHelper.SEPTEMBER) return "September " + year;
+		if (month == CalenderHelper.OCTOBER) return "October " + year;
+		if (month == CalenderHelper.NOVEMBER) return "November " + year;
+		if (month == CalenderHelper.DECEMBER) return "December " + year;
+		return "ERROR";
 	}
 	
 	private void createLables()
