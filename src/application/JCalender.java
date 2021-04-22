@@ -10,6 +10,8 @@ public class JCalender extends JPanel
 	private static final long serialVersionUID = 1L;
 	
 	private int month, year, days, startDay;
+	
+	private final int rows = 6, columns = 7;
 
 	public JCalender(int month, int year)
 	{
@@ -18,7 +20,7 @@ public class JCalender extends JPanel
 		days = CalenderHelper.getMonthLength(month, year);
 		startDay = CalenderHelper.getMonthStartDate(month, year);
 		
-		this.setLayout(new GridLayout(6, 7));
+		this.setLayout(new GridLayout(rows, columns));
 		
 		createLables();
 		setDates();
@@ -56,15 +58,15 @@ public class JCalender extends JPanel
 	{
 		for (int i = 0; i < startDay; i++)
 		{
-			this.add(new DateBox("x"));
+			this.add(new DateBox(" X "));
 		}
 		for (int i = 0; i < days; i++)
 		{
 			this.add(new DateBox(i + ")"));
 		}
-		for (int i = 0; i < 42 - startDay - days; i++)
+		for (int i = 0; i < rows * columns - startDay - days; i++)
 		{
-			this.add(new DateBox("X"));
+			this.add(new DateBox(" X "));
 		}
 	}
 	
