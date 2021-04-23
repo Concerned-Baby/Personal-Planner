@@ -5,6 +5,8 @@ import java.awt.GridLayout;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import logging.LogWriter;
+
 public class JCalender extends JPanel
 {
 	private static final long serialVersionUID = 1L;
@@ -15,15 +17,18 @@ public class JCalender extends JPanel
 
 	public JCalender(int month, int year)
 	{
+		LogWriter.write("Creating a calender");
 		this.month = month;
 		this.year = year;
 		days = CalenderHelper.getMonthLength(month, year);
 		startDay = CalenderHelper.getMonthStartDate(month, year);
 		
+		LogWriter.write("Calender starting set up");
 		this.setLayout(new GridLayout(rows, columns));
 		
 		createLables();
 		setDates();
+		LogWriter.write("Calender finished set up");
 	}
 	
 	public String toString()
