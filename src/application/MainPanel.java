@@ -22,6 +22,7 @@ public class MainPanel extends JFrame
 	{
 		super(name);
 		buttonManager = new ButtonManager();
+		this.setLayout(null);
 		LogWriter.write("MainPanel Created");
 	}
 	
