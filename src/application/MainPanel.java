@@ -38,15 +38,18 @@ public class MainPanel extends JFrame
 	{
 		if (panel == 1) //from main menu
 		{
-			this.remove(toCalender);
-			this.add(createCalender(0, 0));
+			LogWriter.write("arrived at removal");
+			this.remove(toCalender); //TODO actually remove button
+			this.getContentPane().remove(toCalender);
+			LogWriter.write("removed main menu");
+			this.add(createCalender(CalenderHelper.DECEMBER, 2004));
 			LogWriter.write("Sucessfully went to calender from main menu");
 		}
 	}
 	
 	private JPanel createCalender(int month, int year)
 	{
-		LogWriter.write("creating calender" + month + "" + year);
+		LogWriter.write("creating calender " + month + " " + year);
 		return new JCalender(month, year);
 	}
 
@@ -58,8 +61,9 @@ public class MainPanel extends JFrame
 		{
 			if (e.getSource().equals(toCalender))
 			{
-				setCalander(1);
 				LogWriter.write("Trying to go to calender from main menu");
+				setCalander(1);
+				
 			}
 		}
 		
