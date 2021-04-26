@@ -11,6 +11,8 @@ import logging.LogWriter;
 
 public class MainPanel extends JFrame
 {
+	
+	private static int MAINMENUID = 2593;
 
 	private static final long serialVersionUID = 1L;
 	
@@ -37,7 +39,7 @@ public class MainPanel extends JFrame
 	
 	public void setCalander(int panel)
 	{
-		if (panel == 1) //from main menu
+		if (panel == MAINMENUID) 
 		{
 			LogWriter.write("arrived at removal");
 			this.remove(toCalender); //TODO actually remove button
@@ -63,7 +65,7 @@ public class MainPanel extends JFrame
 			if (e.getSource().equals(toCalender))
 			{
 				LogWriter.write("Trying to go to calender from main menu");
-				setCalander(1);
+				setCalander(MAINMENUID);
 				
 			}
 		}
