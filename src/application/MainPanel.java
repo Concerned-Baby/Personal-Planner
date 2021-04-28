@@ -19,12 +19,15 @@ public class MainPanel extends JFrame
 	private ButtonManager buttonManager;
 	
 	private JButton toCalender;
+	
+	private JPanel mainMenu, calendarPage;
 
 	public MainPanel(String name) 
 	{
 		super(name);
 		buttonManager = new ButtonManager();
 		this.setLayout(null);
+		setPages();
 		LogWriter.write("MainPanel Created");
 	}
 	
@@ -54,6 +57,13 @@ public class MainPanel extends JFrame
 	{
 		LogWriter.write("creating calender " + month + " " + year);
 		return new JCalender(month, year);
+	}
+	
+	private void setPages()
+	{
+		//main menu
+		
+		//calendar
 	}
 
 	private class ButtonManager implements ActionListener
