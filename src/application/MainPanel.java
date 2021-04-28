@@ -31,15 +31,6 @@ public class MainPanel extends JFrame
 		LogWriter.write("MainPanel Created");
 	}
 	
-	public void setMainMenu()
-	{
-		toCalender = new JButton("Go To Calander");
-		toCalender.setBounds(400, 400, 120, 80);
-		toCalender.addActionListener(buttonManager);
-		this.add(toCalender);
-		LogWriter.write("Menu set and displayed");
-	}
-	
 	public void setCalander(int panel)
 	{
 		if (panel == MAINMENUID) 
@@ -62,8 +53,16 @@ public class MainPanel extends JFrame
 	private void setPages()
 	{
 		//main menu
+		mainMenu = new JPanel();
+		mainMenu.setLayout(null);
+		toCalender = new JButton("Go To Calander");
+		toCalender.setBounds(400, 400, 120, 80);
+		toCalender.addActionListener(buttonManager);
+		mainMenu.add(toCalender);
 		
+		LogWriter.write("Menu set");
 		//calendar
+		calendarPage = new JPanel();
 	}
 
 	private class ButtonManager implements ActionListener
