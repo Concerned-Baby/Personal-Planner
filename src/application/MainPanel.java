@@ -31,15 +31,12 @@ public class MainPanel extends JFrame
 		LogWriter.write("MainPanel Created");
 	}
 	
-	public void setCalander(int panel)
+	public void goToCalender(int fromPanel)
 	{
-		if (panel == MAINMENUID) 
+		if (fromPanel == MAINMENUID) 
 		{
 			LogWriter.write("arrived at removal");
-			this.remove(toCalender); //TODO actually remove button
-			this.getContentPane().remove(toCalender);
-			LogWriter.write("removed main menu");
-			this.add(createCalender(CalenderHelper.DECEMBER, 2004));
+			
 			LogWriter.write("Sucessfully went to calender from main menu");
 		}
 	}
@@ -74,7 +71,7 @@ public class MainPanel extends JFrame
 			if (e.getSource().equals(toCalender))
 			{
 				LogWriter.write("Trying to go to calender from main menu");
-				setCalander(MAINMENUID);
+				goToCalender(MAINMENUID);
 				
 			}
 		}
