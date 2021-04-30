@@ -28,7 +28,8 @@ public class MainPanel extends JFrame
 		buttonManager = new ButtonManager();
 		this.setLayout(null);
 		setPages();
-		LogWriter.write("MainPanel Created");
+		LogWriter.write("Panels Created");
+		this.getContentPane().add(mainMenu);
 	}
 	
 	public void goToCalender(int fromPanel)
@@ -36,7 +37,8 @@ public class MainPanel extends JFrame
 		if (fromPanel == MAINMENUID) 
 		{
 			LogWriter.write("arrived at removal");
-			
+			this.getContentPane().remove(mainMenu);
+			this.getContentPane().add(calendarPage);
 			LogWriter.write("Sucessfully went to calender from main menu");
 		}
 	}
@@ -72,7 +74,6 @@ public class MainPanel extends JFrame
 			{
 				LogWriter.write("Trying to go to calender from main menu");
 				goToCalender(MAINMENUID);
-				
 			}
 		}
 		
