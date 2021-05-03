@@ -12,13 +12,13 @@ import logging.LogWriter;
 public class MainPanel extends JFrame
 {
 	
-	private static int MAINMENUID = 2593;
+	private static int MAINMENUID = 2593, STARTID = 94568, CALENDERPAGEID = 4683;
 
 	private static final long serialVersionUID = 1L;
 	
 	private ButtonManager buttonManager;
 	
-	private JButton toCalender;
+	private JButton toCalender, backtoMainMenu;
 	
 	private JPanel mainMenu, calendarPage;
 
@@ -29,7 +29,7 @@ public class MainPanel extends JFrame
 		this.setLayout(null);
 		setPages();
 		LogWriter.write("Panels Created");
-		this.getContentPane().add(mainMenu);
+		goToMainMenu(STARTID);
 	}
 	
 	public void goToCalender(int fromPanel)
@@ -40,6 +40,18 @@ public class MainPanel extends JFrame
 			this.getContentPane().remove(mainMenu);
 			this.getContentPane().add(calendarPage);
 			LogWriter.write("Sucessfully went to calender from main menu");
+		}
+	}
+	
+	public void goToMainMenu(int fromPanel)
+	{
+		if (fromPanel == STARTID)
+		{
+			this.getContentPane().add(mainMenu);
+		}
+		else if (fromPanel == CALENDERPAGEID)
+		{
+			//TODO
 		}
 	}
 	
@@ -62,6 +74,11 @@ public class MainPanel extends JFrame
 		LogWriter.write("Menu set");
 		//calendar
 		calendarPage = new JPanel();
+		mainMenu.setLayout(null);
+		backtoMainMenu = new JButton("Go Back To Main Menu");
+		backtoMainMenu.setBounds(400, 400, 120, 80);
+		backtoMainMenu.addActionListener(buttonManager);
+		calendarPage.add(backtoMainMenu);
 	}
 
 	private class ButtonManager implements ActionListener
@@ -74,6 +91,11 @@ public class MainPanel extends JFrame
 			{
 				LogWriter.write("Trying to go to calender from main menu");
 				goToCalender(MAINMENUID);
+			}
+			if (e.getSource().equals(backtoMainMenu))
+			{
+				LogWriter.write("Trying to go to main menu from calendar page");
+				goToMainMenu(CALENDERPAGEID);
 			}
 		}
 		
