@@ -70,8 +70,8 @@ public class MainPanel extends JFrame
 		toCalender.setBounds(400, 400, 120, 80);
 		toCalender.addActionListener(buttonManager);
 		mainMenu.add(toCalender);
-		
 		LogWriter.write("Menu set");
+		
 		//calendar
 		calendarPage = new JPanel();
 		mainMenu.setLayout(null);
@@ -79,6 +79,7 @@ public class MainPanel extends JFrame
 		backtoMainMenu.setBounds(400, 400, 120, 80);
 		backtoMainMenu.addActionListener(buttonManager);
 		calendarPage.add(backtoMainMenu);
+		LogWriter.write("Calender set");
 	}
 
 	private class ButtonManager implements ActionListener
