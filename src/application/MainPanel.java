@@ -26,9 +26,12 @@ public class MainPanel extends JFrame
 	{
 		super(name);
 		buttonManager = new ButtonManager();
-		this.setLayout(null);
+		
+		setLayout(null);
 		setPages();
+		
 		LogWriter.write("Panels Created");
+		
 		goToMainMenu(STARTID);
 	}
 	
@@ -37,28 +40,27 @@ public class MainPanel extends JFrame
 		if (fromPanel == MAINMENUID) 
 		{
 			LogWriter.write("arrived at removal");
-			this.getContentPane().remove(mainMenu);
-			this.getContentPane().add(calendarPage);
-			LogWriter.write("Sucessfully went to calender from main menu");
+			removeFrame(mainMenu);
 		}
+		displayFrame(calendarPage);
+		LogWriter.write("Sucessfully went to calender from main menu");
 	}
 	
 	public void goToMainMenu(int fromPanel)
 	{
-		if (fromPanel == STARTID)
-		{
-			this.getContentPane().add(mainMenu);
-		}
-		else if (fromPanel == CALENDERPAGEID)
-		{
-			//TODO
-		}
+		if (fromPanel == STARTID) {}
+		else if (fromPanel == CALENDERPAGEID) removeFrame(calendarPage);
+		displayFrame(mainMenu);
 	}
 	
-	private JPanel createCalender(int month, int year)
+	private void displayFrame(JPanel p)
 	{
-		LogWriter.write("creating calender " + month + " " + year);
-		return new JCalender(month, year);
+		this.getContentPane().add(p);
+	}
+	
+	private void removeFrame(JPanel p)
+	{
+		this.getContentPane().remove(p);
 	}
 	
 	private void setPages()
