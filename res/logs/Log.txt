@@ -1,11 +1,4 @@
-[2021-04-25T15:12:35.735] Program Started
-[2021-04-25T15:12:35.938] MainPanel Created
-[2021-04-25T15:12:35.993] Menu set and displayed
-[2021-04-25T15:12:37.335] Trying to go to calender from main menu
-[2021-04-25T15:12:37.335] arrived at removal
-[2021-04-25T15:12:37.337] removed main menu
-[2021-04-25T15:12:37.337] creating calender 12567 2004
-[2021-04-25T15:12:37.339] Creating a calender
-[2021-04-25T15:12:37.340] Calender starting set up
-[2021-04-25T15:12:37.346] Calender finished set up
-[2021-04-25T15:12:37.348] Sucessfully went to calender from main menu
+[2021-05-04T20:42:06.727] Program Started
+[2021-05-04T20:42:06.985] Menu set
+[2021-05-04T20:42:06.986] Calender set
+[2021-05-04T20:42:06.986] Panels Created
