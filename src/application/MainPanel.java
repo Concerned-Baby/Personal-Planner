@@ -12,7 +12,7 @@ import logging.LogWriter;
 public class MainPanel extends JFrame
 {
 	
-	private static int MAINMENUID = 2593, STARTID = 94568, CALENDERPAGEID = 4683;
+	private static int MAINMENUID = 6676, STARTID = 6677, CALENDERPAGEID = 6678;
 
 	private static final long serialVersionUID = 1L;
 	
