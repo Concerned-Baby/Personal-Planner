@@ -48,8 +48,8 @@ public class MainPanel extends JFrame
 	
 	public void goToMainMenu(int fromPanel)
 	{
-		if (fromPanel == STARTID) {}
-		else if (fromPanel == CALENDERPAGEID) removeFrame(calendarPage);
+		if (fromPanel == STARTID);
+		else if (fromPanel == CALENDERPAGEID) removeFrame(calendarPage);;
 		displayFrame(mainMenu);
 	}
 	
