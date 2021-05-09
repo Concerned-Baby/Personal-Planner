@@ -43,7 +43,7 @@ public class MainPanel extends JFrame
 			removeFrame(mainMenu);
 		}
 		displayFrame(calendarPage);
-		LogWriter.write("Sucessfully went to calender from main menu");
+		LogWriter.write("Sucessfully went to calender");
 	}
 	
 	public void goToMainMenu(int fromPanel)
@@ -51,6 +51,7 @@ public class MainPanel extends JFrame
 		if (fromPanel == STARTID);
 		else if (fromPanel == CALENDERPAGEID) removeFrame(calendarPage);;
 		displayFrame(mainMenu);
+		LogWriter.write("Sucessfully went to main menu");
 	}
 	
 	private void displayFrame(JPanel p)
