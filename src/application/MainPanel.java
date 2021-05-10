@@ -56,12 +56,12 @@ public class MainPanel extends JFrame
 	
 	private void displayFrame(JPanel p)
 	{
-		this.getContentPane().add(p);
+		//TODO
 	}
 	
 	private void removeFrame(JPanel p)
 	{
-		this.getContentPane().remove(p);
+		//TODO
 	}
 	
 	private void setPages()
