@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -27,7 +28,7 @@ public class MainPanel extends JFrame
 		super(name);
 		buttonManager = new ButtonManager();
 		
-		setLayout(null);
+		//setLayout(null);
 		setPages();
 		
 		LogWriter.write("Panels Created");
@@ -56,12 +57,12 @@ public class MainPanel extends JFrame
 	
 	private void displayFrame(JPanel p)
 	{
-		//TODO
+		this.getContentPane().add(p, BorderLayout.CENTER);
 	}
 	
 	private void removeFrame(JPanel p)
 	{
-		//TODO
+		this.getContentPane().remove(p);
 	}
 	
 	private void setPages()
